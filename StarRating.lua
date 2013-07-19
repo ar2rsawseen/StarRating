@@ -29,8 +29,8 @@ function StarRating:init(config)
 		end
 	end
 	
-	self.conf.empty = Texture.new(self.conf.empty)
-	self.conf.full = Texture.new(self.conf.full)
+	self.conf.empty = Texture.new(self.conf.empty, true, {wrap = Texture.REPEAT})
+	self.conf.full = Texture.new(self.conf.full, true, {wrap = Texture.REPEAT})
 	
 	local height = self.conf.empty:getHeight()
 	local width = self.conf.empty:getWidth()*self.conf.maxRating
